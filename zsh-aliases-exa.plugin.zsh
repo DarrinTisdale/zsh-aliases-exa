@@ -12,5 +12,5 @@ alias l='exa -lBF'                       # list, size, show type
 alias la='exa -ldFa'                     # long list, show almost all, show type and hidden
 alias lr='exa -RFa --sort=modified'      # list, sorted by modified date, recursive, show type and hidden
 alias lm='exa -lBdFa --sort=modified'    # long list, no recursion, sorted by modified date, show type and hidden
-alias ll='exa -lBhgcm@'                  # long list
+alias ll='exa -lBhgUm@'                  # long list
 alias lS='exa -1'			 # one list
