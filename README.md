@@ -22,8 +22,26 @@ Restart your zsh session, and the aliases will be available.
 ## Aliases
 
 ```bash
-{TBD} Undergoing testing right now
+alias l='exa -lBF'                       # list, size, show type
+alias la='exa -ldFa'                     # long list, show almost all, show type and hidden
+alias lr='exa -RFa --sort=modified'      # list, sorted by modified date, recursive, show type and hidden
+alias lm='exa -lBdFa --sort=modified'    # long list, no recursion, sorted by modified date, show type and hidden
+alias ll='exa -lBhgUm@'                  # long list
+alias lS='exa -1'                        # one list
 ```
+Note that for the time being, I am using equivalents for `ls`.
+
+## Next Steps
+
+* Add in zshrc options to configure options
+  1. color
+  2. date format
+  3. alias profiles
+* Create function to configure different profiles of aliases, so that different alias groups can be enabled. For example, one profile may be for replacing `ls`, another may leave those commands alone and use ones based on `exa` only. 
+
+## Thanks
+
+Big thanks to Oh My Zsh, Homebrew, and Exa for these terrific tools. They have made the command line fun again.
 
 ## Contributors
 
