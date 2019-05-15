@@ -22,14 +22,19 @@ Restart your zsh session, and the aliases will be available.
 ## Aliases
 
 ```bash
-alias l='exa -lBF'                       # list, size, show type
-alias la='exa -ldFa'                     # long list, show almost all, show type and hidden
-alias lr='exa -RFa --sort=modified'      # list, sorted by modified date, recursive, show type and hidden
-alias lm='exa -lBdFa --sort=modified'    # long list, no recursion, sorted by modified date, show type and hidden
-alias ll='exa -lBhgUm@'                  # long list
-alias lS='exa -1'                        # one list
+# general use
+alias ls='exa'                                                          # ls
+alias l='exa -lbF --git'                                                # list, size, type, git
+alias ll='exa -lbGFd --git'                                             # long list
+alias llm='exa -lbGFd --git --sort=modified'                            # long list, modified date sort
+alias la='exa -ldbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+alias lx='exa -ldbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+
+# speciality views
+alias lS='exa -1'			                                                  # one column, just names
+alias lt='exa --tree --level=2'                                         # tree
+
 ```
-Note that for the time being, I am using equivalents for `ls`.
 
 ## Next Steps
 
@@ -37,6 +42,7 @@ Note that for the time being, I am using equivalents for `ls`.
   1. color
   2. date format
   3. alias profiles
+  4. including git column
 * Create function to configure different profiles of aliases, so that different alias groups can be enabled. For example, one profile may be for replacing `ls`, another may leave those commands alone and use ones based on `exa` only. 
 
 ## Thanks

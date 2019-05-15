@@ -4,13 +4,18 @@
 # Created:  2019-04-12 19:07:28
 # Author:   Darrin Tisdale
 # -----
-# Modified: 2019-04-12 19:09:40
+# Modified: 2019-05-14 23:18:24
 # Editor:   Darrin Tisdale
 #
 
-alias l='exa -lBF'                       # list, size, show type
-alias la='exa -ldFa'                     # long list, show almost all, show type and hidden
-alias lr='exa -RFa --sort=modified'      # list, sorted by modified date, recursive, show type and hidden
-alias lm='exa -lBdFa --sort=modified'    # long list, no recursion, sorted by modified date, show type and hidden
-alias ll='exa -lBhgUm@'                  # long list
-alias lS='exa -1'			 # one list
+# general use
+alias ls='exa'                                                          # ls
+alias l='exa -lbF --git'                                                # list, size, type, git
+alias ll='exa -lbGFd --git'                                             # long list
+alias llm='exa -lbGFd --git --sort=modified'                            # long list, modified date sort
+alias la='exa -ldbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+alias lx='exa -ldbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+
+# speciality views
+alias lS='exa -1'			                                                  # one column, just names
+alias lt='exa --tree --level=2'                                         # tree
