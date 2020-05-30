@@ -1,3 +1,8 @@
+if [[ -z $commands[exa] ]]; then
+    echo 'exa is not installed. See https://github.com/ogham/exa#installation'
+    return 1
+fi
+
 #
 # Project:  zsh-aliases-exa
 # File:     /zsh-aliases-exa.plugin.zsh
