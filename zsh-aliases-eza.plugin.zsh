@@ -10,6 +10,7 @@ alias ll='eza -lbGF --git'                                             # long li
 alias llm='eza -lbGF --git --sort=modified'                            # long list, modified date sort
 alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
 alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+alias lsi='eza --icons'                                                # ls + icons
 
 # speciality views
 alias lS='eza -1'                                                      # one column, just names
